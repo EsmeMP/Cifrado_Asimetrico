@@ -38,7 +38,7 @@ def cargar_claves():
     return private_key, public_key
 
 
-# Cifrar mensaje con la clave pública
+# Cifrar mensaje con la clave publica
 def cifrar(mensaje: bytes, public_key):
     mensaje_cifrado = public_key.encrypt(
         mensaje,

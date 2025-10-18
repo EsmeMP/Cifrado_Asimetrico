@@ -9,8 +9,8 @@ opcion = input("Elige cifrado: ")
 if opcion == "1":
     rSA_cifrado.main()
 elif opcion == "2":
-    dSA_cifrado.main()
-elif opcion == "3":
     eCC_cifrado.main()
+elif opcion == "3":
+    dSA_cifrado.main()
 elif opcion == "4":
     diffie_Hellman_cifrado.main()
