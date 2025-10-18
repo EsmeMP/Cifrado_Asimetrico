@@ -1,25 +1,16 @@
-# IMPORTACIONES (rutas de los otros scripts)
-from cifrados import diffie_Hellman_cifrado, dSA_cifrado, eCC_cifrado, rSA_cifrado 
-import os
+from cifrados import rSA_cifrado, dSA_cifrado, eCC_cifrado, diffie_Hellman_cifrado
 
-def menu():
-    print("=== Cifrado Asimétrico ===")
-    print("1. RSA")
-    print("2. DSA")
-    print("3. ECC")
-    print("4. Diffie–Hellman")
-    opcion = input("Elige una opción: ")
-
-    if opcion == "1":
-        os.system("python cifrados/RSA_cifrado.py")
-    elif opcion == "2":
-        os.system("python cifrados/DSA_cifrado.py")
-    elif opcion == "3":
-        os.system("python cifrados/ECC_cifrado.py")
-    elif opcion == "4":
-        os.system("python cifrados/Diffie–Hellman_cifrado.py")
-    else:
-        print("Opción no válida.")
-
-if __name__ == "__main__":
-    menu()
+print("\n=== Cifrado Asimétrico ===")
+print("1. RSA")
+print("2. ECC (Elliptic Curve Cryptography)")
+print("3. DSA / ECDSA")
+print("4. Diffie-Hellman")
+opcion = input("Elige cifrado: ")
+if opcion == "1":
+    rSA_cifrado.main()
+elif opcion == "2":
+    dSA_cifrado.main()
+elif opcion == "3":
+    eCC_cifrado.main()
+elif opcion == "4":
+    diffie_Hellman_cifrado.main()
